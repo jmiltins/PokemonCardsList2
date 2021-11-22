@@ -86,6 +86,7 @@
                                             <outlet property="pokeyImageView" destination="BnE-M7-Aj0" id="tig-io-Afd"/>
                                             <outlet property="subtypeLabel" destination="VA9-2h-jly" id="r5J-QA-eza"/>
                                             <outlet property="supertypeLabel" destination="2FU-h0-OUl" id="f2r-ki-xFr"/>
+                                            <segue destination="LpF-I6-3qD" kind="show" identifier="pokey" id="mBV-QT-ek4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -112,13 +113,43 @@
             </objects>
             <point key="canvasLocation" x="920.625" y="32.5"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="FN5-tk-kDd">
+            <objects>
+                <viewController id="LpF-I6-3qD" customClass="DetailViewController" customModule="PokemonCardsList2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hKS-PV-eTi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kmQ-aG-xHT">
+                                <rect key="frame" x="21" y="44" width="283" height="416"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yld-yT-mXk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kmQ-aG-xHT" secondAttribute="trailing" id="5P3-9j-ZxC"/>
+                            <constraint firstItem="kmQ-aG-xHT" firstAttribute="top" secondItem="yld-yT-mXk" secondAttribute="top" id="8q7-LE-unr"/>
+                            <constraint firstItem="kmQ-aG-xHT" firstAttribute="leading" secondItem="yld-yT-mXk" secondAttribute="leading" constant="21" id="F6Y-eS-3lk"/>
+                            <constraint firstItem="kmQ-aG-xHT" firstAttribute="bottom" secondItem="yld-yT-mXk" secondAttribute="bottom" constant="-20" id="KKX-9Y-PZ9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b9c-Ti-9yH"/>
+                    <connections>
+                        <outlet property="imageView" destination="kmQ-aG-xHT" id="EsC-SM-CVI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbW-gA-lJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="32.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="efO-8K-pEF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BD0-nN-AzM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZIc-qT-qDv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

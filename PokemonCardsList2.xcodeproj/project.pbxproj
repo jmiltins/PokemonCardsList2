@@ -16,6 +16,7 @@
 		8B13FB36274AD2170099DBDC /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13FB35274AD2170099DBDC /* Pokemon.swift */; };
 		8B13FB39274AD2950099DBDC /* PokeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13FB38274AD2950099DBDC /* PokeyTableViewCell.swift */; };
 		8B13FB3C274AD2D30099DBDC /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8B13FB3B274AD2D30099DBDC /* SDWebImage */; };
+		8B13FB3E274BE3720099DBDC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13FB3D274BE3720099DBDC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8B13FB2C274AD0F00099DBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B13FB35274AD2170099DBDC /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		8B13FB38274AD2950099DBDC /* PokeyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeyTableViewCell.swift; sourceTree = "<group>"; };
+		8B13FB3D274BE3720099DBDC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				8B13FB22274AD0EB0099DBDC /* PokemonViewController.swift */,
 				8B13FB38274AD2950099DBDC /* PokeyTableViewCell.swift */,
+				8B13FB3D274BE3720099DBDC /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				8B13FB23274AD0EB0099DBDC /* PokemonViewController.swift in Sources */,
 				8B13FB36274AD2170099DBDC /* Pokemon.swift in Sources */,
 				8B13FB1F274AD0EB0099DBDC /* AppDelegate.swift in Sources */,
+				8B13FB3E274BE3720099DBDC /* DetailViewController.swift in Sources */,
 				8B13FB39274AD2950099DBDC /* PokeyTableViewCell.swift in Sources */,
 				8B13FB21274AD0EB0099DBDC /* SceneDelegate.swift in Sources */,
 			);

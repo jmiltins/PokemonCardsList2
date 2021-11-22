@@ -8,7 +8,7 @@
 import UIKit
 
 class PokemonViewController: UIViewController {
-
+    
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     var pokey: [Pokemon] = []
@@ -76,4 +76,16 @@ extension PokemonViewController: UITableViewDelegate, UITableViewDataSource {
         return 250
     }
     
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "pokey"{
+     // Get the new view controller using segue.destination.
+             guard let destinationVC = segue.destination as? DetailViewController, let row = tableViewOutlet.indexPathForSelectedRow?.row else {return}
+             
+     // Pass the selected object to the new view controller.
+             destinationVC.pokemon = pokey[row]
+     }
+     }
 }
