@@ -8,6 +8,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="W2c-4M-a5A">
+            <objects>
+                <viewController id="CZE-dO-L5c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AdR-KA-7Ii">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="96N-4M-BwR">
+                                <rect key="frame" x="35.5" y="145.5" width="249" height="189"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app shows the Pokemon cards and some detailed Info about them." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP2-Gd-6w7">
+                                        <rect key="frame" x="0.0" y="0.0" width="249" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="77" id="Tq2-Ct-cdg"/>
+                                            <constraint firstAttribute="width" constant="249" id="tKw-yw-ReG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEL-li-1Cc">
+                                        <rect key="frame" x="85.5" y="85" width="78" height="104"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="104" id="9nA-7i-xOF"/>
+                                            <constraint firstAttribute="width" constant="78" id="dg2-Ll-pBb"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OPK-ft-toc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="96N-4M-BwR" firstAttribute="centerX" secondItem="AdR-KA-7Ii" secondAttribute="centerX" id="Pew-hM-9cF"/>
+                            <constraint firstItem="96N-4M-BwR" firstAttribute="centerY" secondItem="AdR-KA-7Ii" secondAttribute="centerY" id="i8I-XE-OIm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xDN-Cl-FKG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMo-mq-6OW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="-763.75"/>
+        </scene>
         <!--Pokèmon List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -105,7 +149,20 @@
                             <constraint firstItem="MIN-UI-qhF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oG9-dt-cdw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pokèmon List" id="Huk-Do-xz8"/>
+                    <navigationItem key="navigationItem" title="Pokèmon List" id="Huk-Do-xz8">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="info.circle.fill" catalog="system" id="xuo-l9-NhX">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="CZE-dO-L5c" kind="show" id="otm-Dv-43k"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="menucard" catalog="system" id="KGd-at-8Au">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="sXC-uz-qhJ" kind="show" id="XRm-ir-gzy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableViewOutlet" destination="MIN-UI-qhF" id="UJW-ny-mCV"/>
                     </connections>
@@ -149,7 +206,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BD0-nN-AzM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZIc-qT-qDv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -161,8 +218,55 @@
             </objects>
             <point key="canvasLocation" x="13.043478260869566" y="34.821428571428569"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6jf-1b-QcO">
+            <objects>
+                <viewController id="sXC-uz-qhJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8py-lf-oOt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="VeP-yP-fhY">
+                                <rect key="frame" x="61.5" y="176" width="197" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to settings to switch to the dark mode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxl-l7-knP">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="L8m-0K-0QD"/>
+                                            <constraint firstAttribute="width" constant="197" id="MR9-7z-XNv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkI-2B-Zdz">
+                                        <rect key="frame" x="60" y="97" width="77.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Yt-I0-jeK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VeP-yP-fhY" firstAttribute="centerY" secondItem="8py-lf-oOt" secondAttribute="centerY" id="SjQ-Iq-cpn"/>
+                            <constraint firstItem="VeP-yP-fhY" firstAttribute="centerX" secondItem="8py-lf-oOt" secondAttribute="centerX" id="dnO-h5-6BI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vBa-J8-cLs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJP-Kr-BQ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233.75" y="-765"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="menucard" catalog="system" width="107" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
